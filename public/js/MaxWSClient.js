@@ -15,12 +15,12 @@ ws.onopen = function (event) {
 ws.onmessage = function (event) {
 	let parsedArray = event.data.split(' ');
 
-	if ( parsedArray[0] == "pot" ) {
+	if ( parsedArray[0] == "/pot" ) {
 		let value = parseInt(parsedArray[1]);
 		let logo = document.getElementById("logo");
 		logo.style.transform = "rotate("+ (value % 360) +"deg)"
 
-	} else if ( parsedArray[0] == "bouton" ) {
+	} else if ( parsedArray[0] == "/bouton" ) {
 		backgroundToggle = parseInt(parsedArray[1]);
 		let grey = backgroundToggle * 255;
 		document.body.style.backgroundColor = 'rgb('+grey+','+grey+','+grey+')';

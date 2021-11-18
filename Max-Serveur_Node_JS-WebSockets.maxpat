@@ -179,8 +179,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 713.0, 264.0, 62.0, 22.0 ],
-					"text" : "bouton $1"
+					"patching_rect" : [ 713.0, 264.0, 65.0, 22.0 ],
+					"text" : "/bouton $1"
 				}
 
 			}
@@ -203,8 +203,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 615.0, 269.0, 42.0, 22.0 ],
-					"text" : "pot $1"
+					"patching_rect" : [ 615.0, 269.0, 45.0, 22.0 ],
+					"text" : "/pot $1"
 				}
 
 			}
@@ -609,6 +609,8 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
+										"node_bin_path" : "",
+										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -750,8 +752,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
