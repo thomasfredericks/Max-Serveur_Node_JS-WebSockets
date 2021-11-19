@@ -62,6 +62,7 @@ wsServer.on("connection", function connection(ws, req) {
 
 	ws.on("message", function incoming(message) {
 		console.log("received: %s", message);
+		Max.outlet(message);
 	});
 
 	ws.on("close", function stop() {
@@ -70,15 +71,7 @@ wsServer.on("connection", function connection(ws, req) {
 
 		ws.terminate();
 	});
-/*
-	const sender = function (a, b, c) {
-		ws.send(JSON.stringify({
-			"value_1": a,
-			"value_2": b,
-			"value_3": c
-		}));
-	};
-*/
+	
 	// Handle the Max interactions here...
 	Max.addHandler("send", (...args) => {
 		console.log("What?");
@@ -87,12 +80,7 @@ wsServer.on("connection", function connection(ws, req) {
 			s = s + args[i] + " " ;
 		}
 		ws.send(s);
-		/*
-		console.log("send args: " + args);
-		if (args.length === 3) {
-			sender(args[0], args[1], args[2]);
-		}
-		*/
+
 	});
 });
 
